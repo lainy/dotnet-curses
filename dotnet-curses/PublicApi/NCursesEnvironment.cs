@@ -86,6 +86,7 @@ namespace Mindmagma.Curses
             NativeExceptionHelper.ThrowOnFailure(result, nameof(Raw));
         }
 
+#if NCURSES_TRACE
         /// <summary>
         /// Writes debug information to the "trace" file in the current directory.
         /// WARNING - Some flags log multiple megabytes per second in rapid-read or rapid-update applications.
@@ -96,6 +97,6 @@ namespace Mindmagma.Curses
             // http://invisible-island.net/ncurses/man/curs_trace.3x.html
             Native.trace(flags);
         }
-
+#endif
     }
 }

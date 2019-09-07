@@ -64,9 +64,11 @@ namespace Mindmagma.Curses.Interop
         private static dt_raw call_raw = NativeToDelegate<dt_raw>("raw");
         internal static int raw() => call_raw();
 
+#if NCURSES_TRACE
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate void dt_trace(uint flags);
         private static dt_trace call_trace = NativeToDelegate<dt_trace>("trace");
         internal static void trace(uint flags) => call_trace(flags);
+#endif
     }
 }
