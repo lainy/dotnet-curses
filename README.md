@@ -45,7 +45,7 @@ The "Replace" properties are false by default. If you leave it at the default bu
 Currently the names built into _dotnet-curses_ are as follows and should work for most target environments:
 
 - Windows: `libncursesw6.dll`
-- Linux: `libncurses.so.5.9`, `libncurses.so`
+- Linux: `libncurses.so.5.9`, `libncurses.so`, `libncursesw.so`
 - OSX: `libncurses.dylib`
 
 ## Native Library Loader
